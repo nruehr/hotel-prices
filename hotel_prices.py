@@ -68,17 +68,13 @@ def write_to_json_file(input):
     json_file.write(input)
     json_file.close()
 
-# formatted display price looks good
-# output one of these jsons to txt
+
 # you can find the region ids on the site
 # tokyo = 3593
-# you can find the price in 
-# object > data > propertyserach > properties > price
-# make sure that availability is true!
+# do i have to ensure that availability is true?
 # there are two prices, which one do you use?
-# one of them is before, one of them after discounts
+# likely one of them is before, one of them after discounts
 
-# function to set country
 # todo: define a set of city, country, region id tripels that are permitted
 def set_country():
     pass
@@ -143,8 +139,6 @@ if __name__ == '__main__':
     #resp = find_hotels(region_id = '3593')
     #json_string = json.dumps(resp)
     #write_to_json_file(input=json_string)
-
-    # I need this so I don't have to make the request every time.
     #input = open('data.json')
     #input_json = json.load(input)
     #prices_df = parse_json(input=input_json)
@@ -153,23 +147,10 @@ if __name__ == '__main__':
 
 
     '''
-    Locations for the price
+    Possible locations for the price
     print(input_json['data']['propertySearch']['properties'][0]['price']['displayMessages'][0]['lineItems'][0]['price']['formatted'])
     print(input_json['data']['propertySearch']['properties'][0]['price']['options'][0]['formattedDisplayPrice'])
     print(input_json['data']['propertySearch']['properties'][0]['price']['lead']['amount'])
     print(input_json['data']['propertySearch']['properties'][0]['price']['options'][0]['strikeOut']['formatted'])
     print(input_json['data']['propertySearch']['properties'][0]['price']['options'][0]['strikeOut']['amount'])
-    
-
-    # This looks like the best option
-    price = round(input_json['data']['propertySearch']['properties'][0]['price']['lead']['amount'], 2)
-    print(price)
     '''
-    
-    '''
-    # build the final dataframe
-    output = pd.DataFrame(columns=['date','country','city','booking_from',
-                               'booking_until', 'currency', 'count', 'mean',
-                               'min', 'max', 'std', 'range'])
-    '''
-
