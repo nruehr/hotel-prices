@@ -1,4 +1,8 @@
 /.venv
+/.vscode
 /ideas.txt
 /sample_data.csv
 /sample_data_generator.xlsx
+/data.json
+/key.env
+/output.csv
